@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/vehicle"><i class="fa fa-plus"></i> Create New</a> Vehicle List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Vehicle number</th>
+            <th>City</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.Vehicle_number}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/vehicle/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/vehicle/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

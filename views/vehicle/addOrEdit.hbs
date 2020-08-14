@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/vehicle" method="POST" autocomplete="onn">
+    <input type="hidden" name="_id" value="{{vehicle._id}}">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="Name" placeholder="Name" value="{{vehicle.Name}}">
+        <div class="text-danger">
+            {{vehicle.NameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{vehicle.email}}">
+        <div class="text-danger">
+            {{vehicle.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Vehicle number</label>
+            <input type="text" class="form-control" name="Vehicle_number" placeholder="Vehicle_number" value="{{vehicle.Vehicle_number}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" placeholder="City" value="{{vehicle.city}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/vehicle/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
