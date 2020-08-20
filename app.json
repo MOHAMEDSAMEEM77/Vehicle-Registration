@@ -1,8 +1,0 @@
-{
-  "name": "Vehicle-Registration",
-  "description": "A MEAN app that allows users to register vehicle list.",
-  "repository": "https://github.com/MOHAMEDSAMEEM77/Vehicle-Registration",
-  "logo": "https://mlab.com/company/brand/resources/mLab-logo-onlight.png",
-  "keywords": ["node", "express", "angular", "MEAN", "mongodb", "REST", "API"],
-  "addons": ["mongolab"]
-}
