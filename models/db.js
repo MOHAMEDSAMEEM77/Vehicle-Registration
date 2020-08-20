@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/VehicleDB', { useNewUrlParser: true }, (err) => {
-    if (!err) { console.log('MongoDB Connection Succeeded.') }
-    else { console.log('Error in DB connection : ' + err) }
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/vehicle-registration', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose is connected!!!!');
+});
 require('./vehicle.model');
